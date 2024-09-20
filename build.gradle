@@ -27,11 +27,3 @@ dependencies {
 tasks.named('test') {
 	useJUnitPlatform()
 }
-
-jar {
-    archiveFileName = 'discografia.jar'
-}
-
-bootJar {
-    mainClassName = 'org.iplacex.DiscografiaApplication'
-}
