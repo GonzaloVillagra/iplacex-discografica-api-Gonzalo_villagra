@@ -10,14 +10,8 @@ COPY src ./src
 
 RUN gradle build --no-daemon
 
-<<<<<<< Updated upstream
-
-#STAGE 2
-FROM openjdk:21-slim
-=======
 # STAGE 2
 FROM openjdk:21-jdk-slim 
->>>>>>> Stashed changes
 
 WORKDIR /app
 
