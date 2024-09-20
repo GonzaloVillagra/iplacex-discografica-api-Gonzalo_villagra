@@ -23,7 +23,9 @@ import org.springframework.web.bind.annotation.RestController;
 public class ArtistaController {
     @Autowired
     private IArtistaRepository artistaRepo;
-//metodo para agregar un artista     
+    
+//Funcion para agregar un artista   
+
 @PostMapping(
     value = "/artista",
     consumes = MediaType.APPLICATION_JSON_VALUE,
@@ -34,7 +36,8 @@ public ResponseEntity<Artista> handleInsertArtistaRequest(@RequestBody Artista a
     return new ResponseEntity<>(temp, HttpStatus.CREATED);
 }
 
-//Metodo para Buscar a todos los artistas
+//Funcion para Buscar a todos los artistas
+
     @GetMapping(
         value = "/artista/{id}",
         produces = MediaType.APPLICATION_JSON_VALUE
@@ -68,7 +71,7 @@ public ResponseEntity<Artista> handleInsertArtistaRequest(@RequestBody Artista a
         return new ResponseEntity<>(temp, HttpStatus.OK);
     }
 
-//Metodo para Editar informacion
+//Funcion para Editar informacion
     @PutMapping(
     value = "/artista/{id}",
     consumes = MediaType.APPLICATION_JSON_VALUE,
@@ -85,7 +88,7 @@ public ResponseEntity<Artista> handleInsertArtistaRequest(@RequestBody Artista a
         Artista temp = artistaRepo.save(artista);
         return new ResponseEntity<>(temp, HttpStatus.OK);
     }
-    //Metodo para eliminar segun ID
+    //Funcion para eliminar segun ID
     @DeleteMapping(
         value = "/artista/{id}"
     )

@@ -31,7 +31,7 @@ public class DiscoController {
         this.iArtistaRepo = iArtistaRepo;
     }
     
-//Metodo para ingresar un Discazo
+//Funcion para ingresar disco
 
 @PostMapping(
     value = "/disco",
@@ -47,7 +47,7 @@ public ResponseEntity<Disco> HandlePostDiscoRequest(@RequestBody Disco disco) {
     return new ResponseEntity<>(temp, HttpStatus.CREATED);
 }
 
-//metodo para obtener loa discos de un artista
+//Funcion para obtener loa discos de un artista
 
 @GetMapping(
     value = "/discos",
@@ -60,7 +60,8 @@ public ResponseEntity<List<Disco>> HandleGetDiscosRequest(){
     }
     return new ResponseEntity<>(discos, HttpStatus.OK);
 }
-//metodo para obtener un disco por ID
+//Funcion para obtener un disco por ID
+
 @GetMapping(
     value = "/disco/{id}",
     produces = MediaType.APPLICATION_JSON_VALUE
@@ -73,7 +74,8 @@ public ResponseEntity<Disco> handleGetDiscoRequest(@PathVariable("id") String id
     return new ResponseEntity<>(temp.get(), HttpStatus.OK);
 }
 
-//metodo para borrar un registro por id
+//Funcion para borrar un registro por id
+
 @GetMapping(
     value = "/discos/artista/{idArtista}",
     produces = MediaType.APPLICATION_JSON_VALUE
