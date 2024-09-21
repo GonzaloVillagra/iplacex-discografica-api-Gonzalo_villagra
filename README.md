@@ -1,2 +1,2 @@
 # iplacex-discografica-api-Gonzalo_villagra
- Api_Rest_biblioteca
+ API REST Express para administración de películas favoritas de empleados de IPLACEX
